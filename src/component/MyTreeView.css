@@ -1,0 +1,47 @@
+/* configuarabel style */
+.tree-view{
+    /* background-color: rgb(170, 245, 222); */
+    margin-left:30px;
+    margin-right: 30px;
+    margin-top:20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.tree-node{
+    /* color:blueviolet; */
+    /* background-color: orange; */
+    cursor: pointer;
+    font-size: 22px;
+    color: rgb(22, 22, 22);
+}
+.tree-child{
+    /* color:red; */
+    /* background-color: green; */
+    padding-left:10px;
+    font-size: 20px;
+    color: rgb(15, 15, 15)
+}
+/*configuarabel style  */
+li{
+    list-style-type: none;
+}
+ul{
+    list-style-type: none;
+}
+.tree-ul{
+    padding: 4px;
+    margin:0px;
+}
+.tree-node-expand::after {
+    content: "▼";
+    display: inline-block;
+    font-size: 83%;
+    margin-left: 0.5em;
+    vertical-align: center;
+}
+.tree-node-collapsed::after {
+    content: "▶";
+    display: inline-block;
+    font-size: 83%;
+    margin-left: 0.5em;
+    vertical-align: center;
+}
