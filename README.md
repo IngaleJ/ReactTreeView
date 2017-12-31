@@ -1,14 +1,11 @@
-React tree view
+##### React tree view
 
-Tree: React Tree Component Is a control that is used to display data in hierarchical form.
-1.    The input should be in form of JSON data.
-2.    Option in vertical format with collapse and expand option
-3.    Icons should be configurable for the parent/ child items
-5.    It should have an option to configure position, font (size and color) and background color.
-
-Tag: <Tree data={this. state.inputData}/>
-Data Input can be in below format:
-     var inputData= {
+Tree: React Tree Component is a control that is used to display data in hierarchical form.
+1.    The input in form of JSON data. 
+    like
+```javascript
+                    <Tree data={inputData}/>
+var inputData= {
   "id":0,
   "node":"world",
   "childs": [
@@ -19,13 +16,13 @@ Data Input can be in below format:
     "childs": [
       {
         "id": 11,
-        "url":"www.google.com",
+        "url":"",
         "node": "Brazil",
         "childs": []
       },
       {
         "id": 12,
-        "url":"www.google.com",
+        "url":"",
         "node": "Uruguay",
         "childs": []
       }
@@ -38,18 +35,22 @@ Data Input can be in below format:
     "childs": [
       {
         "id": 21,
-        "url":"www.google.com",
+        "url":"",
         "node": "Canada",
         "childs": []
       }
 }
-
-To do:-
+```
+2.    Collapse and expand options
+3.    Icons configurable for the parent/ child items
+            using [fontawesome] (http://fontawesome.io/icons/) liabrary 
+4.   Option to configure position, font (size and color) and background color.
+    -- styles maintain in separate .css filr
+##### ToDo:-
 4.    It should be able to support checkboxes and node images for each item.
 
 
-
-
+-------------------------------------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
