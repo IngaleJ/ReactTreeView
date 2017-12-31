@@ -21,13 +21,16 @@ class RenderNode extends Component {
     return (
       <div key={this.props.data.id} className='tree'>
         <ul className='tree-ul'>
-          <a onClick={this.toggle} className={this.state.show ? 'tree-node tree-node-expand' : 'tree-node tree-node-collapsed'} >
+          <a onClick={this.toggle} className={this.state.show
+            ? 'tree-node tree-node-expand' : 'tree-node tree-node-collapsed'} >
             <span className={parentIcon} aria-hidden='true'>
               { this.props.data.node}
             </span>
           </a>
           {
-            this.state.show ? <RenderChild childs={this.props.data.childs} childIcon={childIcon} parentIcon={parentIcon} /> : ''
+            this.state.show
+            ? <RenderChild childs={this.props.data.childs}
+              childIcon={childIcon} parentIcon={parentIcon} /> : ''
           }
         </ul>
       </div>

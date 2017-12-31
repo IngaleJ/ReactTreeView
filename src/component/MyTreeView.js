@@ -20,5 +20,3 @@ class Tree extends Component {
 }
 
 export default Tree
-// document.getElementsByClassName("collapse").collapse('show');
-// ref :- http://jsfiddle.net/ssorallen/XX8mw/
