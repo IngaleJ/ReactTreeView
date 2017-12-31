@@ -1,0 +1,42 @@
+/* configuarabel style */
+.tree-view{
+    /* background-color:  */
+    margin-left:30px;
+    margin-right: 30px;
+    margin-top:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+.tree-node{
+    /* color: */
+    /* background-color: ; */
+    cursor: pointer;
+}
+.tree-child{
+    /* color: */
+    /* background-color: */
+    padding-left:10px;
+}
+/*configuarabel style  */
+
+li,ul{
+    list-style-type: none;
+}
+.tree-ul{
+    padding: 4px;
+    margin:0px;
+}
+.tree-node-expand::after {
+    content: "▼";
+    display: inline-block;
+    font-size: 83%;
+    margin-left: 0.5em;
+    vertical-align: center;
+}
+.tree-node-collapsed::after {
+    content: "▶";
+    display: inline-block;
+    font-size: 83%;
+    margin-left: 0.5em;
+    vertical-align: center;
+}
