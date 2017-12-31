@@ -12,10 +12,10 @@ class App extends Component {
     this.onSelected = this.onSelected.bind(this)
   }
   onSelected (selected) {
-    alert (selected.id + selected.node + selected.childs)
+    console.log(selected.id + selected.node + selected.childs)
   }
   render () {
-    const inputData = {"id":0,"node":"world","childs":[{"id":1,"url":"www.google.com","node":"South America","childs":[{"id":11,"url":"www.google.com","node":"Brazil","childs":[]},{"id":12,"url":"www.google.com","node":"Uruguay","childs":[]}]},{"id":2,"url":"www.google.com","node":"North America","childs":[{"id":21,"url":"www.google.com","node":"Canada","childs":[]},{"id":22,"url":"www.google.com","node":"USA","childs":[{"id":221,"url":"www.google.com","node":"New York","childs":[{"id":2211,"node":"Brooklyn","childs":[]}]}]}]}]}
+    const inputData = {"id":0,"node":"world","childs":[{"id":1,"url":"/","node":"South America","childs":[{"id":11,"url":"/brazil","node":"Brazil","childs":[]},{"id":12,"url":"/","node":"Uruguay","childs":[]}]},{"id":2,"url":"/","node":"North America","childs":[{"id":21,"url":"/","node":"Canada","childs":[]},{"id":22,"url":"/","node":"USA","childs":[{"id":221,"url":"/","node":"New York","childs":[{"id":2211,"node":"Brooklyn","childs":[]}]}]}]}]}
     return (
       <div>
         <div className="App">
@@ -45,18 +45,18 @@ export default App;
   "childs": [
   {
     "id": 1,
-    "url":"www.google.com",
+    "url":"/",
     "node": "South America",
     "childs": [
       {
         "id": 11,
-        "url":"www.google.com",
+        "url":"/brazil",
         "node": "Brazil",
         "childs": []
       },
       {
         "id": 12,
-        "url":"www.google.com",
+        "url":"/",
         "node": "Uruguay",
         "childs": []
       }
@@ -64,23 +64,23 @@ export default App;
   },
   {
     "id": 2,
-    "url":"www.google.com",
+    "url":"/",
     "node": "North America",
     "childs": [
       {
         "id": 21,
-        "url":"www.google.com",
+        "url":"/",
         "node": "Canada",
         "childs": []
       },
       {
         "id": 22,
-        "url":"www.google.com",
+        "url":"/",
         "node": "USA",
         "childs": [
           {
             "id": 221,
-            "url":"www.google.com",
+            "url":"/",
             "node": "New York",
             "childs": [
               {

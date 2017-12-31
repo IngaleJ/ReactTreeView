@@ -17,7 +17,7 @@ class RenderChild extends Component {
         {
           child.childs[0]
           ? <Tree data={child} onSelected={this.props.onSelected} childIcon={childIcon} parentIcon={parentIcon}/>
-          : <span className={childIcon}>
+          : <span className={childIcon} onClick={this.props.onSelect}>
             <a href={child.url}>{child.node}</a>
           </span>
         }
