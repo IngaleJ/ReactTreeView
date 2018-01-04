@@ -3,6 +3,13 @@ import './MyTreeView.css'
 import RenderNodes from './RenderNode'
 
 class Tree extends Component {
+  constructor(){
+    super()
+    this.onSelect = this.onSelect.bind(this)
+  }
+  onSelect (){
+    return this.props.onSelect()
+  }
   render () {
     let propsData = this.props.data
     let childIcon = this.props.childIcon
@@ -14,7 +21,7 @@ class Tree extends Component {
             data={data}
             childIcon={childIcon}
             parentIcon={parentIcon}
-            onSelect={this.props.onSelect} />)
+            onSelect={this.onSelect} />)
       )
     } else {
       return (
@@ -22,7 +29,7 @@ class Tree extends Component {
           data={propsData}
           childIcon={childIcon}
           parentIcon={parentIcon}
-          onSelect={this.props.onSelect} />
+          onSelect={this.onSelect} />
       )
     }
   }

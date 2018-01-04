@@ -8,6 +8,10 @@ class RenderChild extends Component {
       show: false
     }
   }
+  onSelect (value) {
+    // debugger
+    return this.props.onSelect(value)
+  }
   render () {
     let childIcon = this.props.childIcon
     let parentIcon = this.props.parentIcon
@@ -15,10 +19,10 @@ class RenderChild extends Component {
     childs = this.props.childs.map((child) => (
       <li key={child.id} className='tree-child'>
         {
-          child.childs[0]
+          child.child && child.childs[0]
           ? <Tree data={child} onSelected={this.props.onSelected} childIcon={childIcon} parentIcon={parentIcon}/>
-          : <span className={childIcon} onClick={this.props.onSelect}>
-            <a href={child.url}>{child.node}</a>
+          : <span className={childIcon + 'dropdown-item'}>
+            <p onClick={this.onSelect.bind(this, child.value)}>{child.node}</p>
           </span>
         }
       </li>

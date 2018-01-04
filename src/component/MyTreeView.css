@@ -10,12 +10,17 @@
 .tree-node{
     /* color: */
     /* background-color: ; */
-    cursor: pointer;
+    cursor: default;
 }
 .tree-child{
     /* color: */
     /* background-color: */
     padding-left:10px;
+    cursor: pointer;
+    
+}
+.tree-child:hover{
+    background-color: pink
 }
 /*configuarabel style  */
 

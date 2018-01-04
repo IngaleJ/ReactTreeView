@@ -7,7 +7,6 @@ class RenderNode extends Component {
       show: false
     }
     this.toggle = this.toggle.bind(this)
-    this.onSelect = this.onSelect.bind(this)
   }
 
   toggle () {
@@ -16,9 +15,9 @@ class RenderNode extends Component {
     })
   }
 
-  onSelect (){
-    console.log('Node',this.props.onSelect)
-    return this.props.onSelect
+  onSelect (value){
+    console.log('Node',value)
+    return this.props.onSelect(value)
   }
 
   render () {
@@ -27,16 +26,16 @@ class RenderNode extends Component {
     return (
       <div key={this.props.data.id} className='tree'>
         <ul className='tree-ul'>
-          <a onClick={this.toggle} className={this.state.show
+          <a onMouseOver={this.toggle} className={this.state.show
             ? 'tree-node tree-node-expand' : 'tree-node tree-node-collapsed'} >
-            <span className={parentIcon} aria-hidden='true' onClick={this.onSelect}>
+            <span className={parentIcon} aria-hidden='true'>
               { this.props.data.node}
             </span>
           </a>
           {
             this.state.show
             ? <RenderChild childs={this.props.data.childs}
-              childIcon={childIcon} parentIcon={parentIcon} onSelect={this.onSelect} /> : ''
+              childIcon={childIcon} parentIcon={parentIcon} onSelect={this.onSelect.bind(this)} /> : ''
           }
         </ul>
       </div>
