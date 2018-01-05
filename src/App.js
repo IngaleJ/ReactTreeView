@@ -7,13 +7,19 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      value:null
+      value:null,
+      show:false
     }
     this.onSelected = this.onSelected.bind(this)
+    this.toggle= this.toggle.bind(this)
   }
   onSelected (value) {
-    debugger
     console.log(value)
+  }
+  toggle(){
+    this.setState(
+      {show:!this.state.show}
+    )
   }
   render () {
     const inputData = {"id":0,"node":"world","childs":[{"id":1,"url":"/","node":"South America","childs":[{"id":11,"url":"/brazil","node":"Brazil","childs":[]},{"id":12,"url":"/","node":"Uruguay","childs":[]}]},{"id":2,"url":"/","node":"North America","childs":[{"id":21,"url":"/","node":"Canada","childs":[]},{"id":22,"url":"/","node":"USA","childs":[{"id":221,"url":"/","node":"New York","childs":[{"id":2211,"node":"Brooklyn","childs":[]}]}]}]}]}
@@ -30,7 +36,6 @@ class App extends Component {
         <div>
           
           <div className='col-md-4 col-md-offset-3 tree-view'>
-            
           </div>
           <div className="dropdown show">
             <a className="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,6 +48,19 @@ class App extends Component {
                 parentIcon='fa fa-tree'/>
             </div>
           </div>
+
+          <div className="input-group mb-3">
+            <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+            <div className="input-group-append">
+              <button className="btn btn-outline-secondary" onClick={this.toggle}type="button">Button</button>
+            </div>
+          </div>
+          <div>
+            {this.state.show ? 
+              <Tree data={inputData1} onSelect={this.onSelected} 
+                childIcon='fa fa-leaf' 
+                parentIcon='fa fa-tree'/> : ''}
+            </div>
         </div>
       </div>
     );

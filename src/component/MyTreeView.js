@@ -16,12 +16,15 @@ class Tree extends Component {
     let parentIcon = this.props.parentIcon
     if (propsData.length > 1) {
       return (
-        propsData.map((data) =>
+        <div className='my-drop-down'>
+        {propsData.map((data) =>
           <RenderNodes
             data={data}
             childIcon={childIcon}
             parentIcon={parentIcon}
-            onSelect={this.onSelect} />)
+            onSelect={this.onSelect} />
+        )}
+        </div>
       )
     } else {
       return (

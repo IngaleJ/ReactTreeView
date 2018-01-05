@@ -12,6 +12,17 @@
     /* background-color: ; */
     cursor: default;
 }
+.my-drop-down{
+    display: block;
+    position: absolute;
+    background-color:rgb(192, 227, 243);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin-top:-20px
+
+}
 .tree-child{
     /* color: */
     /* background-color: */
@@ -20,7 +31,7 @@
     
 }
 .tree-child:hover{
-    background-color: pink
+    background-color: rgb(153, 212, 216)
 }
 /*configuarabel style  */
 

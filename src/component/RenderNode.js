@@ -26,7 +26,7 @@ class RenderNode extends Component {
     return (
       <div key={this.props.data.id} className='tree'>
         <ul className='tree-ul'>
-          <a onMouseOver={this.toggle} className={this.state.show
+          <a onClick={this.toggle} className={this.state.show
             ? 'tree-node tree-node-expand' : 'tree-node tree-node-collapsed'} >
             <span className={parentIcon} aria-hidden='true'>
               { this.props.data.node}
